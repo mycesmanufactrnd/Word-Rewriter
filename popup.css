@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.modes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mode-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  position: relative;
+}
+
+.mode-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mode-card.active {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.mode-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.mode-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.mode-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.mode-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.mode-card.active .status-dot {
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.mode-card.active .status-text {
+  color: #10b981;
+}
+
+.status-text {
+  color: #999;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.info {
+  font-size: 11px;
+  color: white;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* Animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.mode-card.active {
+  animation: pulse 0.3s ease;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Auto Rewriter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Word Rewriter</h1>
+      <p class="subtitle">Choose your mode</p>
+    </div>
+
+    <div class="modes">
+      <!-- Auto Rewriter Mode -->
+      <div class="mode-card" id="autoMode">
+        <div class="mode-icon">🔄</div>
+        <h2>Auto Rewriter</h2>
+        <p>Replaces words with synonyms when you send messages</p>
+        <div class="mode-status" id="autoStatus">
+          <span class="status-dot"></span>
+          <span class="status-text">Inactive</span>
+        </div>
+      </div>
+
+      <!-- Prank Mode -->
+      <div class="mode-card" id="prankMode">
+        <div class="mode-icon">😈</div>
+        <h2>Prank Mode</h2>
+        <p>Turns your words into typos for hilarious pranks</p>
+        <div class="mode-status" id="prankStatus">
+          <span class="status-dot"></span>
+          <span class="status-text">Inactive</span>
+        </div>
+      </div>
+
+      <!-- Off Mode -->
+      <div class="mode-card" id="offMode">
+        <div class="mode-icon">🚫</div>
+        <h2>Off</h2>
+        <p>Disable all text transformations</p>
+        <div class="mode-status" id="offStatus">
+          <span class="status-dot"></span>
+          <span class="status-text">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="info">Current mode will apply to all websites</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
